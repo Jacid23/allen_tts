@@ -60,8 +60,7 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
         _LOGGER.error("Cannot connect to Allen TTS server: %s", ex)
         return False
 
-    # Load platforms
-    await hass.helpers.discovery.async_load_platform("tts", DOMAIN, {}, config)
-    await hass.helpers.discovery.async_load_platform("sensor", DOMAIN, {}, config)
+    # Store config for platforms to access
+    hass.data[DOMAIN] = config[DOMAIN]
     
     return True
