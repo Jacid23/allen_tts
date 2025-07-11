@@ -1,0 +1,68 @@
+# Allen TTS Custom Component Configuration
+# Add this to your Home Assistant configuration.yaml
+
+# Enable the custom component
+allen_tts:
+  host: 172.30.3.9  # IoT VLAN IP
+  port: 8000
+
+# Configure TTS platform to use Allen TTS
+tts:
+  - platform: allen_tts
+    host: 172.30.3.9
+    port: 8000
+    mood: "Sarcastic"  # Default mood
+    voice: "allen_male"
+    engine: "google"
+
+# REST commands for direct control (optional - custom component provides services)
+rest_command:
+  allen_tts_speak:
+    url: "http://172.30.3.9:8000/speak"
+    method: POST
+    headers:
+      Content-Type: "application/json"
+    payload: >
+      {
+        "text": "{{ text }}",
+        "mood": "{{ mood | default('Sarcastic') }}",
+        "voice": "{{ voice | default('allen_male') }}",
+        "engine": "{{ engine | default('google') }}"
+      }
+    verify_ssl: false
+    timeout: 30
+
+  allen_tts_interrupt:
+    url: "http://172.30.3.9:8000/speak/interrupt"
+    method: POST
+    verify_ssl: false
+    timeout: 10
+
+# Input controls for UI
+input_text:
+  allen_says:
+    name: "Allen Says"
+    max: 500
+    initial: ""
+    icon: mdi:microphone
+
+input_select:
+  allen_mood:
+    name: "Allen's Mood"
+    options:
+      - Happy
+      - Sarcastic
+      - Annoyed
+      - Dramatic
+      - Chill
+      - Excited
+      - Tired
+      - Confused
+    initial: Sarcastic
+    icon: mdi:emoticon-outline
+
+input_boolean:
+  allen_tts_enabled:
+    name: "Allen TTS Enabled"
+    initial: true
+    icon: mdi:account-voice
