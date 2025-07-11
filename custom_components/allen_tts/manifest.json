@@ -1,7 +1,6 @@
 {
   "domain": "allen_tts",
   "name": "Allen TTS Integration",
-  "version": "1.0.0",
   "documentation": "https://github.com/allen-tts/ha-allen-tts",
   "issue_tracker": "https://github.com/allen-tts/ha-allen-tts/issues",
   "dependencies": [],
@@ -10,5 +9,5 @@
   "config_flow": false,
   "integration_type": "service",
   "iot_class": "local_polling"
-  "version": "1.0.1"
+  "version": "1.0.0"
 }
