@@ -10,4 +10,6 @@
   "config_flow": false,
   "integration_type": "service",
   "iot_class": "local_polling"
+},
+  "platforms": ["tts", "sensor"]
 }
