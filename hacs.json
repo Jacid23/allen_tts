@@ -1,13 +1,10 @@
 {
   "name": "Allen TTS Integration",
   "content_in_root": false,
-  "zip_release": true,
   "filename": "allen_tts.zip",
-  "hide_default_branch": false,
   "render_readme": true,
   "domains": ["tts", "sensor"],
   "country": ["US"],
-  "homeassistant": "2023.1.0",
-  "persistent_directory": false,
+  "homeassistant": "2023.1.0"
   "iot_class": "Local Polling"
 }
