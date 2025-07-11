@@ -1,13 +1,13 @@
 {
   "domain": "allen_tts",
   "name": "Allen TTS Integration",
-  "documentation": "https://github.com/allen-tts/ha-allen-tts",
-  "issue_tracker": "https://github.com/allen-tts/ha-allen-tts/issues",
+  "version": "1.0.0",
+  "documentation": "https://github.com/Jacid23/allen_tts",
+  "issue_tracker": "https://github.com/Jacid23/allen_tts/issues",
   "dependencies": [],
-  "codeowners": ["@allen-tts"],
+  "codeowners": ["@Jacid23"],
   "requirements": ["requests>=2.25.0"],
   "config_flow": false,
   "integration_type": "service",
   "iot_class": "local_polling"
-  "version": "1.0.0"
 }
