@@ -1,0 +1,13 @@
+{
+  "domain": "allen_tts",
+  "name": "Allen TTS Integration",
+  "version": "1.0.0",
+  "documentation": "https://github.com/Jacid23/allen_tts",
+  "issue_tracker": "https://github.com/Jacid23/allen_tts/issues",
+  "dependencies": [],
+  "codeowners": ["@Jacid23"],
+  "requirements": ["requests>=2.25.0"],
+  "config_flow": false,
+  "integration_type": "service",
+  "iot_class": "local_polling"
+}
