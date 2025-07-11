@@ -61,6 +61,5 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
         return False
 
     # Store config for platforms to access
-    hass.data[DOMAIN] = config[DOMAIN]
     
     return True
